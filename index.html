@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home-ecotech</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- google font link end -->
+
+    <style>
+        /* font and color  */
+        :root {
+        --font-1: "Oswald", serif;
+        --font-2: "Open Sans", serif;
+        --color-1: #5dd39e;
+        --color-2: #31b378;
+        --color-3: #333333;
+        --color-4: #888888;
+        --color-5: #eee;
+        --color-6: #212529;
+        --color-7: #973b48;
+        --color-8: #f5f5f5;
+        --color-9: #aaa;
+        --color-10: #ddd;
+        --color-11: #131313;
+        }
+        /* font and color end */
+
+        /* common css  */
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .w{width: 1200px;margin: 0 auto;}
+        /* .w{width: 96%;margin: 0 2%;} */
+        /* .w{width: 96%;margin: 0 2%;} */
+        .fsb{display: flex;justify-content: space-between;}
+        .fsa{display: flex;justify-content: space-around;}
+        a{text-decoration: none;}
+
+        .s2{color: var(--color-1);} 
+        .h1{color: #fff;font-size: 60px;font-family: var(--font-1);text-transform: uppercase;font-weight: normal;}
+        .bt1{font-size: 14px;color: #fff;font-family: var(--font-2);background: var(--color-1);padding: 10px 25px;border-radius: 25px;border: none;text-transform: uppercase;font-weight: 700;min-width: 200px;cursor: pointer;transition: 0.3s ease-out;}
+        .bt1:hover{background: var(--color-2);transition: 0.3s ease-out;}
+        .h2{color: var(--color-3);font-size: 36px;font-family: var(--font-1);text-transform: uppercase;font-weight: normal;}
+        .p1{color: #fff;font-family: var(--font-2);font-weight: 300;line-height: 1.5;font-size: 18px;}
+        .p2{font-size: 12px;font-family: var(--font-2);color: var(--color-4);}
+        .hh1{font-size: 18px;font-family: var(--font-1);color: var(--color-3);text-transform: uppercase;font-weight: 400;letter-spacing: 0.2px;}
+        .hr1{height: 1px;background: var(--color-5);border: 0px;width: 100%;margin: 35px 0;}
+        /* common css end */
+
+        /* header  */
+        #hd{background: transparent;padding: 8px 0px;width: 100%;}
+        #d2{display: flex;justify-content: space-between;flex-wrap: wrap;align-items: center;}
+        #sv1{fill: var(--color-1);width: 20px;height: 25px;}
+        #d4{display: flex;align-items: center;gap: 12px;width: 17%;justify-content: flex-end;}
+        #d3{width: 19%;}
+        #n1{width: 64%;display: flex;justify-content: center;gap:30px;}
+        .a2{color: #fff;font-family: var(--font-2);font-size: 14px;font-weight: 700;text-transform: uppercase;transition: 0.3s ease;border-bottom: 4px solid transparent;padding: 15px 0;}
+        #s1{font-size: 18px;font-family: var(--font-2);font-weight: 700;color: #fff;}
+        #s1:hover{color: var(--color-1);transition: 0.3s all;}
+        .a2:hover{color: var(--color-1);transition: 0.3s all;border-bottom-color: var(--color-1);}
+        .scrolled{background: #fff !important;position: fixed !important;z-index: 100;margin-top: 75px;color: #000;}
+        .active{color: var(--color-1) !important;border-bottom: 4px solid var(--color-1);}
+        #i5{width: 40px;height: 40px;}
+        #d5{display: none;transition: 0.3s ease;}
+        /* header end */
+
+        /* section 01 */
+        #z1se1{height: 500px;margin-top: -75px;}
+        #z1d1{background: url(img/slide-03.jpg) no-repeat;background-size: cover;background-position: center top;height: 100%;}
+        #z1d2{display: flex;align-items: center;height: 100%;}
+        .z1p1{max-width: 470px;margin: 12px 0 50px;}
+        /* section 01 end */
+
+        /* section 02  */
+        #z2se1{margin-top: 75px;text-align: center;}
+        #z2d3{display: grid;flex-wrap: wrap;grid-template-columns: repeat(3, 1fr);margin-top: 75px;}
+        .z2i1{width: 100%;}
+        #z2d2{display: flex;flex-direction: column;}
+        .z2p1{font-size: 18px;color: var(--color-3);font-family: var(--font-2);text-align: center;padding: 0 5%;}
+        /* section 02 end */
+
+        /* section 03 */
+        #z3se1{margin-top: 75px;}
+        #z3h1{text-align: center;}
+        #z3d3{margin-top: 75px;display: flex;flex-wrap: wrap;justify-content: space-between;}
+        .z3d4{display: flex;gap: 15px;width: 32%;margin-bottom: 35px;}
+        .z3d5{display: flex;gap: 8px;flex-direction: column;}
+        .z3i1{width: 72px;height: 62px;}
+        /* section 03 end */
+
+        /* section 04 */
+        #z4se1{background: url(img/parallax-04.jpg) no-repeat;background-size: cover;background-position: center;height: 450px;margin-top: 50px;}
+        #z4d1{display: flex;justify-content: center;align-items: center;height: 100%;text-align: center;}
+        #z4h1{color: #fff;margin-bottom: 25px;font-size: 48px;}
+        #z4bt1{background: transparent;border: 2px solid var(--color-1);margin-top: 35px;}
+        #z4bt1:hover{background: var(--color-1);}
+        /* section 04 end */
+
+        /* section 05 */
+        #z5se1{margin-top: 75px;text-align: center;}
+        #z5d3{display: flex;flex-wrap: wrap;justify-content: space-between;margin: 50px 0 75px;}
+        .z5d4{width: 31.5%;display: flex;flex-direction: column;border-radius: 8px;overflow: hidden;box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.2);}
+        .z5i1{width: 100%;height: 100%;}
+        .z5hh1{text-align: initial;text-transform: initial;padding: 15px 38px;background: #fff;}
+        #z5hr1{margin: 75px 0;}
+        /* section 05 end */
+
+        /* section 06 */
+        #z6se1{margin-top: 75px;}
+        #z6h1{text-align: center;}
+        #z6d2{display: flex;flex-direction: column;}
+        #z6d3{margin-top: 50px;display: flex;flex-wrap: wrap;justify-content: space-between;}
+        .z6d4{width: 32%;display: flex;gap: 30px;}
+        .z6i1{border-radius: 100%;width: 70px;height: 70px;}
+        .z6p1{margin-top: 15px;line-height: 1.7;}
+        .z6hh1{font-weight: 900;letter-spacing: 3px;font-size: 14px;color: #000;font-family: var(--font-2);text-transform: uppercase;}
+        #z6hr1{width: 60px;height: 8px;margin: 35px 0;align-self: center;display: flex;}
+        /* section 06 end */
+
+        /* section 07 */
+        #z7se1{background: url(img/parallax-01.jpg) no-repeat;background-size: cover;background-position: center;padding: 100px 0;margin-top: 75px;}
+        #z7h1{color: #fff;text-align: center;padding: 35px 20px;}
+        #z7d2{display: flex;flex-direction: column;align-items: center;margin: 0 10%;}
+        #z7d3{margin-bottom: 50px;background: url(img/border-image.png) no-repeat;background-size: contain;background-position: center;height: 100%;}
+        /* section 07 end */
+
+        /* section 08  */
+        #z8se1{margin: 75px 0 135px;position: relative;}
+        #z8h1{text-align: center;}
+        #z8d3{margin-top: 135px;display: flex;flex-wrap: wrap;justify-content: space-between;height: 256px;}
+        .z8i1{border-radius: 8px;width: 100%;height: 100%;}
+        .z8d4{width: 33%;overflow: hidden;height: 256px;border-radius: 8px;position: relative;display: flex;flex-direction: column;}
+        .z8d4::before{width: 100%;height: 100%;position: absolute;content: "";left: 0;top: 0;background: rgba(0, 0, 0, 0.3);}
+        #z8d8{transform: scale(1.5);z-index: 5;}
+        .z8d9{padding: 25px 35px;justify-self: center;position: absolute;top: 35%;}
+        .z8a1{color: #fff;font-size: 16px;transition: 0.3s ease;}
+        .z8a1:hover{color: var(--color-1);transition: 0.3s ease;}
+        .z8d9 >p{color: #fff;margin-top: 10px;}
+        #z8d10{position: absolute;left: 0;top: 70%;display: flex;justify-content: space-between;width: 100%;transform: translatey(-50%);background: transparent;}
+        .z8d5{color: var(--color-4);background: var(--color-5);width: 60px;height: 60px;display: flex;align-items: center;justify-content: center;transition: 0.3s ease;font-size: 25px;}
+        .z8d5:hover{background: var(--color-1);color: #fff;transition: 0.3s ease;}
+        #z8d6{border-radius: 0 100% 100% 0;}
+        #z8d7{border-radius: 100% 0 0 100%;}
+        /* section 08 end */
+
+        /* section 09  */
+        #z9se1{margin-top: 75px;background: url(img/parallax-05.jpg) no-repeat;background-size: cover;background-position: center;padding: 75px 0 35px;}
+        #z9d2{display: flex;flex-wrap: wrap;justify-content: space-between;}
+        #z9d4{width: 50%;}
+        #z9d3{width: 45%;padding: 4% 0;}
+        #z9h1{color: #fff;margin-bottom: 25px;}
+        #z9p1{margin-bottom: 50px;}
+        #z9i1{width: 100%;}
+        /* section 09 end */
+
+        /* section 10  */
+        #z10se1{margin-top: 75px;}
+        #z10h1{text-align: center;}
+        #z10d3{display: flex;flex-wrap: wrap;justify-content: space-between;}
+        #z10d4{width: 50%;padding: 75px 0 35px;}
+        #z10d7{width: 2px;height: auto;background: var(--color-5);}
+        #z10d2 >hr{margin-bottom: 0;}
+        .z10d5{display: flex;gap: 25px;margin-bottom: 35px;}
+        .z10i1{border-radius: 5px;}
+        .z10hh1{text-transform: initial;margin-bottom: 8px;}
+        .z10p2{font-size: 14px;margin-bottom: 30px;}
+        .z10p1{font-size: 14px;font-family: var(--font-2);color: var(--color-6);font-weight: 700;margin-bottom: 3px;}
+        .z10s1{float: right;}
+        .z10d6{width: 200px;}
+        .z10a1{color: var(--color-4);font-weight: 400;}
+        .z10a1:hover{color: var(--color-1);transition: 0.3s;}
+        #z10hh1{font-size: 20px;text-align: center;margin-bottom: 0px;padding: 0 3%}
+        #z10f1{width: 43%;padding: 75px 0px 35px 50px;display: flex;flex-wrap: wrap;justify-content: center;gap: 12px;justify-self: flex-end;}
+        .z10in1,.z10sl1{width: 100%;border: 1px solid var(--color-10);border-radius: 8px;outline: 0px;background: var(--color-8);color: var(--color-9);padding: 5px 25px;font-size: 14px;text-transform: capitalize;height: 40px;font-style: italic;}
+        .z10in1::placeholder{color: var(--color-9);font-size: 14px;}
+        #z10bt1{height: 38px;}
+        /* section 10 end */
+
+        /* footer  */
+        #ft{background: var(--color-11);padding: 75px 0 20px;}
+        #d26{display: flex;flex-direction: column;align-items: center;}
+        #d27{display: flex;gap: 12px;margin-bottom: 35px;}
+        .a26{padding: 0px;width: 35px;height: 35px;border-radius: 100%;background: var(--color-3);display: flex;align-items: center;justify-content: center;transition: 0.3s ease-out;border: 2px solid transparent;}
+        .a26:hover{border-color: #fff;transition: 0.3s ease-out;background: #000;}
+        .i26{width: 18px;height: 18px;}
+        .i25{margin-bottom: 75px;}
+        .s25{color: #fff;}
+        .p25{text-align: center;}
+        /* footer end */
+
+        /*.....................................meadia query...................................................... */
+        @media screen and (max-width: 1240px) {
+            /* common  */
+            .w{width: 96%;margin: 0 2%;};
+        }
+        @media screen and (max-width: 900px) {
+            /* common  */
+            section{margin-top: 50px !important;}
+            /* header */
+            #n1{width: 100%;order: 3;}
+            #d3,#d4{width: 40%;}
+            .scrolled{margin-top: 128px;}
+            /* section 01  */
+            #z1se1{margin-top: -128px !important;}
+            #z1d3{margin-top: 100px;}
+            /* section 05  */
+            #z5hr1{margin: 50px 0;}
+            /* section 06  */
+            #z6d3{justify-content: flex-start;padding-left: 2%;}
+            .z6d4{width: 48%;margin-right: 2%;margin-bottom: 4%;}
+            /* section 07  */
+            #z7d3{background: none;}
+            #z7se1{padding: 50px 0;}
+            #z7d2{margin: 0;}
+            #z7h1{padding: 0;}
+            /* section 08  */
+            .z8d9{text-align: center;top: 50%;transform: translateY(-50%);padding: 8px 15px;}
+            /* section 09  */
+            #z9d3{padding: 0;}
+            /* section 10  */
+            #z10d4{width: 100%;display: flex;flex-direction: column;align-items: center;padding-top: 50px;}
+            #z10d7{width: 100%;}
+            #z10f1{width: 100%;padding: 0px 0 35px;flex-direction: column;align-items: center;}
+            #z10hh1{padding: 0 0 20px;}
+            .z10in1,.z10sl1{width: 65%;}
+            #z10bt1{margin-top: 20px;}
+            #z10d7{display: none;}
+        }
+        @media screen and (max-width: 750px) {
+            /* common  */
+            section{margin-top: 35px !important;}
+            .br2{display: none;}
+            /* header */
+            #n1{gap: 20px;}
+            /* section 01  */
+            #z1d3{width: 100%;text-align: center;}
+            .z1p1{max-width: initial;}
+            /* section 02  */
+            #z2d3{margin-top: 50px;}
+            /* section 03  */
+            #z3d3{margin-top: 50px;}
+            .z3d4{width: 48%;}
+            /* section 05  */
+            #z5hr1{margin: 35px 0;}
+            #z5d3{margin-bottom: 50px;justify-content: flex-start;padding-left: 2%;}
+            .z5d4{width: 48%;margin-right: 2%;margin-bottom: 2%;}
+            /* section 06  */
+            #z6d3{justify-content: center;padding-left: 0;}
+            .z6d4{width: 100%;margin-right: 0;}
+             /* section 08  */
+             #z8se1{margin-bottom: 50px;}
+             #z8d8{transform: scale(1);}
+             .z8d4{width: 100%;}
+             #z8d3{margin-top: 35px;overflow: hidden;}
+             #z8d10{top: 62%;}
+             .z8d9{padding: 10px 50px;}
+            /* section 09  */
+            #z9d3{width: 100%;}
+            #z9d4{width: 75%;}
+            /* section 10  */
+            .z10d5{gap: 15px;}
+            #z10d4{padding: 35px 0 12px;}
+
+        }
+        @media screen and (max-width: 500px) {
+            /* common  */
+            section{margin-top: 20px !important;}
+            .br1{display: none;}
+            /* header */
+            #n1,#d4{display: none;}
+            #d5{display: flex;transition: 0.3s ease;}
+            #d2{justify-content: initial;gap: 20px;}
+            /* section 01  */
+            .h1{font-size: 48px;}
+            #z1se1{height: 550px;}
+            /* section 02  */
+            #z2se1{padding: 0 2%;}
+            #z2d3{grid-template-columns: 1fr;gap: 20px;}
+            .z2p1{padding: 0;}
+            .hr1{margin: 20px 0;}
+             /* section 03  */
+             #z3d3{margin-top: 35px;}
+            .z3d4{width: 100%;flex-direction: column;text-align: center;align-items: center;}
+            /* section 05  */
+            #z5d3{padding-left: 0;margin-bottom: 15px;}
+            .z5d4{width: 100%;margin-right: 0px;margin-bottom: 20px;}
+            .z5hh1{text-align: center;}
+            /* section 06  */
+            #z6d3{margin-top: 35px;gap: 20px;}
+            .z6d4{flex-direction: column;align-items: center;text-align: center;}
+            /* section 07  */
+            #z7h1{font-size: 32px;}
+            /* section 08  */
+            #z8se1{margin-bottom: 35px;}
+             /* section 09  */
+             #z9se1{padding-top: 35px;}
+             #z9d2{justify-content: center;text-align: center;}
+             #z9d4{width: 90%;}
+             /* section 10  */
+            .z10d5{flex-direction: column;align-items: center;}
+            .z10in1,.z10sl1{width: 100%;}
+            /* footer  */
+            #ft{padding-top: 35px;}
+            .i25{margin-bottom: 35px;}
+        }
+        /*....................................meadia query end.....................................................*/
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header id="hd">
+        <div id="d1">
+            <div id="d2" class="w">
+                <div id="d5"><img src="img/icons/menu.svg" alt="menu" id="i5"></div>
+                <div id="d3"><a href="#" id="a1"><img src="img/icons/logo.png" alt="logo" id="i1"></a></div>
+                <nav id="n1">
+                    <a href="#" class="a2 active">home</a>
+                    <a href="#" class="a2">about</a>
+                    <a href="#" class="a2">product</a>
+                    <a href="#" class="a2">testimonials</a>
+                    <a href="#" class="a2">news</a>
+                    <a href="#" class="a2">contacts</a>
+                </nav>
+                <div id="d4">
+                    <svg id="sv1" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" ></path> </g></svg>
+                    <span id="s1">071-1231232</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- section 01  -->
+    <section id="z1se1">
+        <div id="z1d1">
+            <div id="z1d2" class="w">
+                <div id="z1d3">
+                    <h1 class="h1"><span class="s2">eco</span>tech solar panels</h1>
+                    <p class="z1p1 p1">Solar panels are perfect if you are looking for a reliable source of additional power and energy for your home or office.</p>
+                    <button class="bt1">find out more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 01 end  -->
+
+    <!-- section 02  -->
+     <section id="z2se1">
+        <div id="z2d4">
+            <div id="z2d1" class="w">
+                <div id="z2d2">
+                    <h1 class="h2">who we are</h1>
+                    <p class="p2">Team of alternative energy specialists</p>
+                    <hr class="hr1">
+                    <p class="z2p1">Our company is an end-to-end, customer oriented alternative energy company that is centered on marketing, trading, transportation, and distribution of solar panels in the US and around the world... Firstly, we’re an environmentally friendly renewable energy company offering a broad portfolio of technologies, products & solutions to our clients globally!</p>
+                </div>
+            </div>
+            <div id="z2d3">
+                <img src="img/about-01.jpg" alt="about-01" class="z2i1">
+                <img src="img/about-02.jpg" alt="about-02" class="z2i1">
+                <img src="img/about-03.jpg" alt="about-03" class="z2i1">
+            </div>
+        </div>
+     </section>
+    <!-- section 02 end -->
+
+    <!-- section 03  -->
+    <section id="z3se1">
+        <div id="z3d1" class="w">
+            <div id="z3d2">
+                <h1 id="z3h1" class="h2"><span class="s2">advantages</span> you get from <br class="br1"> ordering at eco tech</h1>
+                <div id="z3d3">
+                    <div class="z3d4">
+                        <img src="img/icons/calculator.png" alt="calculator" class="z3i1">
+                        <div class="z3d5">
+                            <h2 class="hh1">calculate your saving</h2>
+                            <p class="p2">With our savings calculator, you can make a right decision on installation of solar panels manufactured by Eco Tech.</p>
+                        </div>
+                    </div>
+                    <div class="z3d4">
+                        <img src="img/icons/calculator.png" alt="calculator" class="z3i1">
+                        <div class="z3d5">
+                            <h2 class="hh1">calculate your saving</h2>
+                            <p class="p2">With our savings calculator, you can make a right decision on installation of solar panels manufactured by Eco Tech.</p>
+                        </div>
+                    </div>
+                    <div class="z3d4">
+                        <img src="img/icons/calculator.png" alt="calculator" class="z3i1">
+                        <div class="z3d5">
+                            <h2 class="hh1">calculate your saving</h2>
+                            <p class="p2">With our savings calculator, you can make a right decision on installation of solar panels manufactured by Eco Tech.</p>
+                        </div>
+                    </div><div class="z3d4">
+                        <img src="img/icons/calculator.png" alt="calculator" class="z3i1">
+                        <div class="z3d5">
+                            <h2 class="hh1">calculate your saving</h2>
+                            <p class="p2">With our savings calculator, you can make a right decision on installation of solar panels manufactured by Eco Tech.</p>
+                        </div>
+                    </div>
+                    <div class="z3d4">
+                        <img src="img/icons/calculator.png" alt="calculator" class="z3i1">
+                        <div class="z3d5">
+                            <h2 class="hh1">calculate your saving</h2>
+                            <p class="p2">With our savings calculator, you can make a right decision on installation of solar panels manufactured by Eco Tech.</p>
+                        </div>
+                    </div>
+                    <div class="z3d4">
+                        <img src="img/icons/calculator.png" alt="calculator" class="z3i1">
+                        <div class="z3d5">
+                            <h2 class="hh1">calculate your saving</h2>
+                            <p class="p2">With our savings calculator, you can make a right decision on installation of solar panels manufactured by Eco Tech.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 03 end  -->
+
+    <!-- section 04  -->
+     <section id="z4se1">
+        <div id="z4d1" class="w">
+            <div class="z4d2">
+                <h1 id="z4h1" class="h2">why <spna class="s2">eco</spna>tech</h1>
+                <p class="p1">After years of experience and more than 500, 000 people <br> powered with the help of our solar panels, we think the <br> choice is really obvious here!</p>
+                <button id="z4bt1" class="bt1">read more about us</button>
+            </div>
+        </div>
+     </section>
+    <!-- section 04 end  -->
+
+    <!-- section 05  -->
+     <section id="z5se1">
+        <div id="z5d1" class="w">
+            <div id="z5d2">
+                <h1 class="h2">our <span class="s2">products</span></h1>
+                <div id="z5d3">
+                    <div class="z5d4">
+                        <img src="img/product-01.jpg" alt="product" class="z5i1">
+                        <div class="z5d5"><h2 class="hh1 z5hh1"><a href="#">NeON 2 315W</a></h2></div>
+                    </div>
+                    <div class="z5d4">
+                        <img src="img/product-02.jpg" alt="product" class="z5i1">
+                        <div class="z5d5"><h2 class="hh1 z5hh1"><a href="#">SolarWorld SW 270 Black</a></h2></div>
+                    </div>
+                    <div class="z5d4">
+                        <img src="img/product-03.jpg" alt="product" class="z5i1">
+                        <div class="z5d5"><h2 class="hh1 z5hh1"><a href="#">EcoGreen 5W 12V Solar Panel</a></h2></div>
+                    </div>
+                </div>
+                <button class="bt1">view all products</button>
+                <hr id="z5hr1" class="hr1">
+            </div>
+        </div>
+     </section>
+    <!-- section 05 end  -->
+
+    <!-- section 06  -->
+     <section id="z6se1">
+        <div id="z6d1" class="w">
+            <div id="z6d2">
+                <h1 id="z6h1" class="h2">our customers enjoy the sunny side <br class="br2"> of their <span class="s2">energy consumption</span> bills.</h1>
+                <hr id="z6hr1" class="hr1">
+                <div id="z6d3">
+                    <div class="z6d4">
+                        <img src="img/home-01.jpg" alt="home-01" class="z6i1">
+                        <div class="z6d5">
+                            <h2 class="z6hh1">Markus Breitbart</h2>
+                            <p class="p2">Freelance Photographer</p>
+                            <p class="p2 z6p1">I have a pretty big house that consumes a sizable amount of energy each month. With the help of these solar panels, I’ve been able to make great cuts to my monthly bills!</p>
+                        </div>
+                    </div>
+                    <div class="z6d4">
+                        <img src="img/home-02.jpg" alt="home-02" class="z6i1">
+                        <div class="z6d5">
+                            <h2 class="z6hh1">Thomas Johnson</h2>
+                            <p class="p2">CEO at <span class="s2">BigInfoDev</span> </p>
+                            <p class="p2 z6p1">Installing a solar panel atop of our office building was a great decision! We’ve managed to cover all our office needs (which houses 50 computers).</p>
+                        </div>
+                    </div>
+                    <div class="z6d4">
+                        <img src="img/home-03.jpg" alt="home-03" class="z6i1">
+                        <div class="z6d5">
+                            <h2 class="z6hh1">Jane Nicholson</h2>
+                            <p class="p2">Web Designer </p>
+                            <p class="p2 z6p1">Everyone I dealt with at the Eco Tech company, from a salesperson and office staff to the installation crew has been incredibly helpful and enthusiastic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- section 06 end  -->
+
+    <!-- section 07  -->
+     <section id="z7se1">
+        <div id="z7d1" class="w">
+            <div id="z7d2">
+                <div id="z7d3">
+                    <h1 id="z7h1" class="h2">Our coverage is the best in the industry, with repairs and production guarantee at no additional charge</h1>
+                </div>
+                <button class="bt1">gey a quote</button>
+            </div>
+        </div>
+     </section>
+    <!-- section 07 end -->
+
+    <!-- section 08  -->
+     <section id="z8se1">
+        <div id="z8d1" class="w">
+            <div id="z8d2">
+                <h1 id="z8h1" class="h2">More <span class="s2">Useful</span> Info</h1>
+                <div id="z8d3">
+                    <div class="z8d4">
+                        <img src="img/carousel-01.jpg" alt="carousel-01" class="z8i1">
+                        <div class="z8d9">
+                            <h2 class="hh1 z8hh1"><a href="#" class="z8a1">How does solar power work?</a></h2>
+                            <p class="p2">In short, our panels absorb the sun’s energy, then channelling it through discreetly placed wires to an inverter. There it is being converted to electricity which eventually powers your home or office...</p>
+                        </div>
+                    </div>
+                    <div id="z8d8" class="z8d4">
+                        <img src="img/carousel-02.jpg" alt="carousel-02" class="z8i1">
+                        <div class="z8d9">
+                            <h2 class="hh1 z8hh1"><a href="#" class="z8a1">How does solar power work?</a></h2>
+                            <p class="p2">In short, our panels absorb the sun’s energy, then channelling it through discreetly placed wires to an inverter. There it is being converted to electricity which eventually powers your home or office...</p>
+                        </div>
+                    </div>
+                    <div class="z8d4">
+                        <img src="img/carousel-03.jpg" alt="carousel-03" class="z8i1">
+                        <div class="z8d9">
+                            <h2 class="hh1 z8hh1"><a href="#" class="z8a1">How does solar power work?</a></h2>
+                            <p class="p2">In short, our panels absorb the sun’s energy, then channelling it through discreetly placed wires to an inverter. There it is being converted to electricity which eventually powers your home or office...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="z8d10">
+            <div id="z8d6" class="z8d5"><span class="z8s1">&#10094;</span></div>
+            <div id="z8d7" class="z8d5"><span class="z8s1">&#10095;</span></div>
+        </div>
+     </section>
+    <!-- section 08 end -->
+
+    <!-- section 09  -->
+     <section id="z9se1">
+        <div id="z9d1" class="w">
+            <div id="z9d2">
+                <div id="z9d4"><img src="img/circle.png" alt="circle" id="z9i1"></div>
+                <div id="z9d3">
+                    <h1 id="z9h1" class="h2">We're dedicated to providing free support</h1>
+                    <p id="z9p1" class="p1">Just after we'll put the solar panels up on your roof, you can count on our free customer support!</p>
+                    <button class="bt1">get a quote</button>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- section 09 end -->
+
+    <!-- section 10 -->
+     <section id="z10se1">
+        <div id="z10d1" class="w">
+            <div id="z10d2">
+                <h1 id="z10h1" class="h2">contact us</h1>
+                <hr class="hr1">
+                <div id="z10d3">
+                    <div id="z10d4">
+                        <div class="z10d5">
+                            <img src="img/contact-01.jpg" alt="contact-01" class="z10i1">
+                            <div class="z10d6">
+                                <h2 class="hh1 z10hh1">HQ Office (Boston, MA, USA)</h2>
+                                <p class="p2 z10p2">8949 Kenamar Drive, Suite 101 <br>Boston, MA 92121</p>
+                                <p class="z10p1">phone: <span class="z10s1"><a class="z10a1" href="#">071-1231232</a></span></p>
+                                <p class="z10p1">fax: <span class="z10s1"><a class="z10a1" href="#">071-1231232</a></span></p>
+                            </div>
+                        </div>
+                        <div class="z10d5">
+                            <img src="img/contact-02.jpg" alt="contact-02" class="z10i1">
+                            <div class="z10d6">
+                                <h2 class="hh1 z10hh1">Toronto Office</h2>
+                                <p class="p2 z10p2">2000 Finch Avenue West<br>Toronto, Ontario M3J 2V5</p>
+                                <p class="z10p1">phone: <span class="z10s1"><a class="z10a1" href="#">071-1231232</a></span></p>
+                                <p class="z10p1">fax: <span class="z10s1"><a class="z10a1" href="#">071-1231232</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="z10d7"></div>
+                    <form action="#" id="z10f1">
+                        <h2 id="z10hh1" class="hh1">Get a pricing quote for a residential or business solar panel installation</h2>
+                        <input type="text" class="z10in1" placeholder="Your Name">
+                        <input type="text" class="z10in1" placeholder="Email">
+                        <input type="text" class="z10in1" placeholder="Phone">
+                        <select class="z10sl1">
+                            <option value="" class="z10op1" selected>Do you need a residential or commercial system?</option>
+                            <option value="" class="z10op1">Residential system</option>
+                            <option value="" class="z10op1">Commercial system</option>
+                        </select>
+                        <select class="z10sl1">
+                            <option value="" class="z10op1" selected>What is your average electricity bill?</option>
+                            <option value="" class="z10op1">100</option>
+                            <option value="" class="z10op1">200</option>
+                            <option value="" class="z10op1">300</option>
+                        </select>
+                        <button id="z10bt1" class="bt1">get a quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- section 10 end -->
+
+    <!-- footer  -->
+     <footer id="ft">
+        <div id="d25" class="w">
+            <div id="d26">
+                <a href="#" class="a25"><img src="img/icons/logo-footer.png" alt="logo-footer" class="i25"></a>
+                <div id="d27">
+                    <a href="#" class="a26"><img src="img/icons/facebook.png" alt="facebook" class="i26"></a>
+                    <a href="#" class="a26"><img src="img/icons/twitter.svg" alt="twitter" class="i26"></a>
+                    <a href="#" class="a26"><img src="img/icons/youtube.svg" alt="youtube" class="i26"></a>
+                    <a href="#" class="a26"><img src="img/icons/linkedin.png" alt="linkedin" class="i26"></a>
+                </div>
+                <p class="p2 p25">Copyright ©2024  <span class="s25">Green Tech, Inc</span>  All rights reserved. Green Tech and GT are trademarks of Green Tech, Inc.</p>
+            </div>
+        </div>
+     </footer>
+    <!-- footer end -->
+
+
+    <script>
+        window.onscroll = function() {
+            const header = document.getElementById("hd");
+            const logoTop = document.getElementById("i1");
+            const navLinks = document.querySelectorAll(".a2");
+            const phone = document.getElementById("s1");
+
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.add("scrolled");
+                logoTop.src = "img/icons/logo-dark.png";
+                navLinks.forEach(link => link.style.color = "#aaa");
+                phone.style.color = "#000";
+            } else {
+                header.classList.remove("scrolled");
+                logoTop.src = "img/icons/logo.png";
+                navLinks.forEach(link => link.style.color = "#fff");
+                phone.style.color = "#fff";
+            }
+        };
+    </script>
+</body>
+</html>
